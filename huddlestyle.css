@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: white;
+    font-family: cursive;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background-image: url('images/bg-desktop.svg');
+    background-size: contain;
+    background-color: blueviolet;
+}
+
+header {
+
+}
+
+article .huddle-container-inner {
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+
+.huddle-img-container {
+    width: 60%;
+}
+
+.huddle-img {
+    width: 100%;
+}
+
+.huddle-img img {
+    display: block;
+    width: 100%;
+}
+
+.huddle-narration {
+    width: 40%;
+    padding-left: 20px;
+}
+
+.huddle-narration-inner .narration-header,
+.huddle-narration-inner .narration-details,
+.huddle-narration-inner .narration-button {
+    padding-bottom: 15px;
+}
+
+.narration-header h1 {
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.narration-button button {
+    color: blueviolet;
+    width: 40%;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 1px 1px 5px 0.5px rgb(33, 1, 80);
+}
+
+.narration-button button:hover {
+    color: white;
+    background-color: hsl(300, 69%, 71%);
+    cursor: pointer;
+}
+
+
+.huddle-social {
+    text-align: right;
+    padding-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-content: flex-end;
+    
+}
+
+.huddle-social div {
+    padding: 5px;
+}
+div.huddle-social a {
+    text-decoration: none;
+}
+
+div.huddle-social a:hover {
+    color:hsl(300, 69%, 71%);
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0px;
+    }
+
+    article .huddle-container-inner {
+        flex-direction: column;
+    }
+
+    .huddle-img-container {
+        width: 100%;
+    }
+
+    .huddle-narration {
+        width: 100%;
+        padding-top: 30px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .huddle-social {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+}
