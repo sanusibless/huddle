@@ -130,7 +130,10 @@ div.huddle-social a:hover {
     width: 50%;
     position:  absolute;
     top: 20%;
+    left: 20%;
+    right: 20%;
     background-color: white;
+    color: rgb(33, 1, 80);
     border: 1px  solid #ddd;
     border-radius: 15px;
     margin: auto auto;
@@ -195,7 +198,7 @@ label {
     font-size: 0.9rem;
 }
 
-input:focus {
+input, input:focus {
     color:rgb(33, 1, 80);
     border: 1px solid rgb(140, 118, 165);
     outline: none;
