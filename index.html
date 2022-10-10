@@ -35,7 +35,7 @@
                                 <p> Huddle re-imagines the way we build commuinties. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion</p>
                             </div>
                             <div class="narration-button">
-                                <button>Register</button>
+                                <button id="btn-open">Register</button>
                             </div>
                         </div>
                     </div>
@@ -43,6 +43,33 @@
             </article>
         </div>
     </section>
+    <section class="modal hidden">
+        <div class="flex">
+            <p>Sign Up</p>
+            <button id="btn-close" class="btn-close">X</button>
+        </div>
+        <hr>
+        <div>
+            <form action="" class="form-div">
+               <div class="form-flex">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname">
+               </div>
+                <div class="form-flex">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname">
+               </div>
+                <div class="form-flex">
+                <button class="btn">
+                    Submit
+                </button>
+               </div>
+                
+            </form>
+        </div>
+    </section>
+    <div class="overlay hidden">
+    </div>
     <footer>
         <div class="huddle-social">
             <div class="huddle-social-link"><a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a></div>
@@ -50,5 +77,23 @@
             <div class="huddle-social-link"><a href="https://instagram.com>"><i class="fa-brands fa-instagram"></i></a></div>
         </div>
     </footer>
+    <script> 
+        const modal = document.querySelector(".modal");
+        const overlay = document.querySelector(".overlay");
+        const openModalBtn = document.querySelector("#btn-open");
+        const closeModalBtn = document.querySelector("#btn-close");
+
+        const openModal = function () {
+            modal.classList.remove("hidden");
+            overlay.classList.remove("hidden");
+        }
+        const closeModal = function () {
+            modal.classList.add("hidden");
+            overlay.classList.add("hidden");
+        }
+    openModalBtn.addEventListener("click", openModal, false);
+    closeModalBtn.addEventListener("click", closeModal,false);
+    overlay.addEventListener("click", closeModal, false)
+    </script>
 </body>
 </html>
